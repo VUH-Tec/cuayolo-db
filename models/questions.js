@@ -25,7 +25,7 @@ function PreguntasDAO(){
 	id_mision : Number
 	});
 
-    Respuestasgral = new Schema({
+    this.Respuestasgral = new Schema({
 	id_respuestasgral : Number,
 	texto_resp_gral : String,
 	f_v_gral : Boolean,
