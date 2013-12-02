@@ -107,9 +107,8 @@ function CoayoloDAO(){
         //Son como las misiones
         this.Experimento = new Schema({
                 id_experimento : Number,
-                descripcion_experimento : String,
-                id_experimento : Number
-        });
+                descripcion_experimento : String
+       });
 
 
         /*
