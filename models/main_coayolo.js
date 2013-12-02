@@ -4,13 +4,12 @@ var Schema = mongoose.Schema;
 function CoayoloDAO(){
 
     //fix
-        var Alumnos = new Schema({
+        this.Alumnos = new Schema({
                 //hay dos campos que pueden usarse como id_alumno con cual nos vamos aquedar
                 id_alumno : Number,
-                id_avatar : Number,
                 matricula : String,
+	        avatar : [Avatar],
                 nombre_usu : String,
-                id_avatar : Number,
                 sexo : String,
                 pass : String,
                 fecha_nacimiento : {type : Date, default : Date.now},
@@ -30,17 +29,17 @@ function CoayoloDAO(){
                 })
         */
 
-        var Area = new Schema({
+        this.Area = new Schema({
                 id_area : Number,
                 nombre_area : String
         });
 
-        var Escuela = new Schema({
+        this.Escuela = new Schema({
                 id_escuela : Number,
                 nombre_esc : String
         });
 
-        var Mision = new Schema({
+        this.Mision = new Schema({
                 id_mision : Number,
                 nombre_mision : String,
                 avance : Number,
@@ -49,7 +48,7 @@ function CoayoloDAO(){
 
         ////////////////////////////////
         //fix
-        var Avatar = new Schema({
+        this.Avatar = new Schema({
                 id_avatar : Number,
                 url_avatar : String,
                 alumnos_id_alumnos : Number,
@@ -57,12 +56,12 @@ function CoayoloDAO(){
                 cabello : [Cabello]
         });
 
-        var Cabello = new Schema({
+        this.Cabello = new Schema({
                 id_cabello : Number,
                 url_cabello : String
         });
 
-        var Piel = new Schema({
+        this.Piel = new Schema({
                 id_piel : Number,
                 url_piel : String
         });
@@ -77,36 +76,36 @@ function CoayoloDAO(){
         // Elimine estas dependecias        
 
 
-        var AlumnosHasMision = new Schema({
+        this.AlumnosHasMision = new Schema({
                 alumnos_id_alumnos : Number,
                 mission_id_mision : Number
         });
 
-        var PublicacionHasAlumnos = new Schema({
+        this.PublicacionHasAlumnos = new Schema({
                 publicacion_id_publicacion : Number,
                 alumnos_id_alumnos : Number
         });
 
-        var AreaHasAlumnos = new Schema({
+        this.AreaHasAlumnos = new Schema({
                 area_id_area : Number,
                 alumnos_id_alumnos : Number,
                 puntos : Number
         });
         ////////////////////////////////////////////////
         ////////////////////////////////////////////////
-        var Casa = new Schema({
+        this.Casa = new Schema({
                 id_casa : Number,
                 nombre_casa : String,
                 id_administrador : Number
         });
-        var Administrador = new Schema({
+        this.Administrador = new Schema({
                 id_admin : Number,
                 nombre_admin : String,
                 pass_admin : String
         });
 
         //Son como las misiones
-        var Experimento = new Schema({
+        this.Experimento = new Schema({
                 id_experimento : Number,
                 descripcion_experimento : String,
                 id_experimento : Number
@@ -124,7 +123,7 @@ function CoayoloDAO(){
         /////////////////////////////////////////////////////
         /////////////////////////////////////////////////////
 
-        var Respuestashc = new Schema({
+        this.Respuestashc = new Schema({
                 id_respuestashc : Number,
                 texto_resp_hc : String,
                 f_v_hc : Boolean,
@@ -132,21 +131,21 @@ function CoayoloDAO(){
         });
 
 
-        var Preghc = new Schema({
+        this.Preghc = new Schema({
                 id_preghc : Number,
                 descripcion_hc : String,
                 id_mision : Number,
                 id_casa : Number
         });
 
-        var Preggral = new Schema({
+        this.Preggral = new Schema({
                 id_preggral : Number,
                 descripcion_gral : String,
                 id_area : Number,
                 id_mision : Number
         });
 
-        var Respuestasgral = new Schema({
+        this.Respuestasgral = new Schema({
                 id_respuestasgral : Number,
                 texto_resp_gral : String,
                 f_v_gral : Boolean,
@@ -157,7 +156,7 @@ function CoayoloDAO(){
 
 
 
-        var Publicacion = new Schema({
+        this.Publicacion = new Schema({
                 fecha_publicacion : {type : Date, default : Date.now},
                 id_publicacion : Number,
 ,                texto_publicacion : String,
@@ -170,7 +169,7 @@ function CoayoloDAO(){
                 });
         */
 
-        var Notificaciones = new Schema({
+        this.Notificaciones = new Schema({
                 id_notificacion : Number,
                 texto_notificacion : String,
                 id_alumnos: Number,
