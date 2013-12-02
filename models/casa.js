@@ -27,3 +27,5 @@ function CasaDAO(){
       })
       */
 }
+
+module.exports.CasaDAO = CasaDAO;
