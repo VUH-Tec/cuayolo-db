@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 function AvatarDAO(){
-    var Avatar = new Schema({
+    this.Avatar = new Schema({
 	id_avatar : Number,
 	url_avatar : String,
 	alumnos_id_alumnos : Number,
@@ -11,12 +11,12 @@ function AvatarDAO(){
 	cabello : [Cabello]
     });
 
-    var Cabello = new Schema({
+    this.Cabello = new Schema({
 	id_cabello : Number,
 	url_cabello : String
     });
 
-    var Piel = new Schema({
+    this.Piel = new Schema({
 	id_piel : Number,
 	url_piel : String
     });
