@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 function PreguntasDAO(){
 
-    var Respuestashc = new Schema({
+    this.Respuestashc = new Schema({
 	id_respuestashc : Number,
 	texto_resp_hc : String,
 	f_v_hc : Boolean,
@@ -11,21 +11,21 @@ function PreguntasDAO(){
 	});
 
 
-    var Preghc = new Schema({
+    this.Preghc = new Schema({
 	id_preghc : Number,
 	descripcion_hc : String,
 	id_mision : Number,
 	id_casa : Number
 	});
 
-    var Preggral = new Schema({
+    this.Preggral = new Schema({
 	id_preggral : Number,
 	descripcion_gral : String,
 	id_casa : Number,
 	id_mision : Number
 	});
 
-    var Respuestasgral = new Schema({
+    Respuestasgral = new Schema({
 	id_respuestasgral : Number,
 	texto_resp_gral : String,
 	f_v_gral : Boolean,
