@@ -2,19 +2,19 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 function CasaDAO(){
-    var Casa = new Schema({
+    this.Casa = new Schema({
 	id_casa : Number,
 	nombre_casa : String,
 	id_administrador : Number
 	});
-    var Administrador = new Schema({
+    this.Administrador = new Schema({
 	id_admin : Number,
 	nombre_admin : String,
 	pass_admin : String
 	});
 
     //Son como las misiones
-    var Experimento = new Schema({
+    this.Experimento = new Schema({
 	id_experimento : Number,
 	descripcion_experimento : String,
 	id_experimento : Number
