@@ -1,4 +1,4 @@
-var express = require('express')A
+var express = require('express')
   , app = express() ///FrameWork inicializacinnn
   //, cons = require('consolidate') // Adaptador de templates
   //, MongoClient = require('mongodb').MongoClient // Driver para manejar la conexinnn a MongoCLient
