@@ -15,6 +15,8 @@ function CoayoloDAO(){
 	id_alumno : Number,
 	id_avatar : Number,
 	matricula : String,
+	email : String,
+	pass : String,
 	nombre_usu : String,
 	id_avatar : Number,
 	sexo : String,
