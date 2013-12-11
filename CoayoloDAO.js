@@ -66,12 +66,21 @@ function CoayoloDAO(){
 	id_cabello : Number,
 	url_cabello : String
 	});
-
+/*
     this.Piel = new Schema({
 	id_piel : Number,
 	url_piel : String
 	});
+*/
+    this.Top = new Schema({
+	id_top = Number,
+	url_top = String
+    })
 
+    this.Bottom = new Schema({
+	id_bottom = Number,
+	url bottom = Stirng
+    });
     /*
       db.avatar.insert({
       id_avatar : 0, url_avatar : '/src/photo.jpg', alumno_id : 0, piel : [{id_piel : 0, url_piel : '/src/piel.jpg'}], cabello : [{id_cabello : 0, url_cabello : '/src/cabello.jpg'}]
